@@ -2,6 +2,8 @@ import express, { Request, Response } from "express";
 import cors from "cors";
 import connection from "./configs/db";
 import userRouter from "./routes/user.router";
+import bookRouter from "./routes/book.router";
+import authenticate from "./middlewares/authentication.middleware";
 
 const app = express();
 const PORT = process.env.PORT || 1010;
@@ -14,6 +16,7 @@ app.get("/", (req: Request, res: Response) => {
 });
 
 app.use("", userRouter);
+app.use("", authenticate, bookRouter);
 
 connection
   .then(() => {
