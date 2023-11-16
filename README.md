@@ -3,7 +3,7 @@
 ⭐ [Live Demo](https://library-management-app-rho.vercel.app/)
 ---
 
-# WordCounter
+# LibraryManagement
 
 ## Introduction
 
